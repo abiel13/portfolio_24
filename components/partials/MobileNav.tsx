@@ -7,10 +7,10 @@ const MobileNav = ({ routes }: { routes: string[] }) => {
   const [visible, setVisible] = useState<boolean>(false);
 
   return (
-    <div className="flex md:hidden inset-x-0 px-3 py-3  w-full items-center justify-between fixed z-50 ">
+    <div className="flex md:hidden inset-x-0 px-3 py-5  w-full items-center justify-between fixed z-50 ">
       <div className="text-[#112c61] font-bold text-2xl tracking-wider">
         Ab
-        <span className="text-white">i</span>el
+        <span className="text-[#449F24]">i</span>el
       </div>
       <div>
         <FaBarsStaggered

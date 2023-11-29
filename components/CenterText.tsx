@@ -9,7 +9,7 @@ import Specialization from "./partials/Specialization";
 const CenterText = () => {
   return (
     <>
-      <div className=" absolute left-[50%] -translate-x-[50%] top-[50%] flex flex-col  px-1 -translate-y-[30%]">
+      <div className=" absolute left-[50%] -translate-x-[50%] top-[50%] flex flex-col  px-1 -translate-y-[50%] md:-translate-y-[30%] ">
         <div className="flex gap-6 items-center">
           <FaStar className="text-5xl md:text-7xl text-white/40" />
 

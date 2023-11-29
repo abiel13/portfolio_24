@@ -27,8 +27,10 @@ const MobileNav = ({ routes }: { routes: string[] }) => {
           } fixed top-0 right-0 h-[100%] w-[80%] bg-[#c9c9da] flex flex-col items-end gap-10 p-7 text-black text-xl transition-all   `}
         >
           <FaX cursor="pointer" onClick={() => setVisible(false)} />
-          {routes?.map((item) => (
-            <Link href={`/${item == "Home" ? "" : item}`}>{item}</Link>
+          {routes?.map((item, i) => (
+            <Link key={i} href={`/${item == "Home" ? "" : item}`}>
+              {item}
+            </Link>
           ))}
           <button className="bg-[#112C61] text-white font-normal text-base py-3 px-4 rounded-lg">
             DownLoad Resume

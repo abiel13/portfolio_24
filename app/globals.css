@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.gradient_bg {
+  background: linear-gradient(
+    113.53deg,
+    #98d084 -32.06%,
+    #b0ee9a 23.06%,
+    #224281 78.18%,
+    #112c61 133.3%
+  );
+  /* background-repeat: no-repeat; */
+}
+
+.gradient_balls {
+  background: linear-gradient(144.5deg, #3c65b4 15.49%, #0a1e46 70.14%);
+}

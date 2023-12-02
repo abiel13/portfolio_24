@@ -26,3 +26,9 @@ body {
 .gradient_balls {
   background: linear-gradient(144.5deg, #3c65b4 15.49%, #0a1e46 70.14%);
 }
+
+.dark_blue {
+  background: linear-gradient(0deg, #000000, #000000),
+  linear-gradient(0deg, rgba(17, 44, 97, 0.25), rgba(17, 44, 97, 0.25));
+  color:'white !important';
+}

@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <Stack className="gradient_sbg min-h-screen relative">
+    <Stack className=" gradient_bg h-[110vh] md:h-[110vh]  relative">
       <div className="mt-16">
         <SphereModel />
       </div>

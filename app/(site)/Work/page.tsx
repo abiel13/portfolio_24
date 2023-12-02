@@ -10,8 +10,9 @@ const Work = () => {
     <Stack sx={{ minHeight: "100vh" }}>
       <div className="flex justify-end mt-10">
         <div className="mt-20 w-full flex flex-wrap relative px-4 gap-5 md:w-[40%]">
-          {data.map((item) => (
+          {data.map((item , i) => (
             <WorkCard
+            key={i}
               projectDesc={item.projectDesc}
               projectTitle={item.projectTitle}
             />

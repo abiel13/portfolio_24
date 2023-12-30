@@ -10,7 +10,8 @@ const Footer = () => {
     <Stack
       direction="row"
       alignItems={"center"}
-      sx={{ gap: "1rem", position: "fixed", bottom: "0px", padding: "1rem" }}
+      className="drop-shadow-md backdrop-blur-lg"
+      sx={{ gap: "1rem", position: "fixed", bottom: "0px", padding: "1rem",  }}
     >
       <Link href={"https://github.com/abiel13"}>
         <FiGithub fontSize={27} />

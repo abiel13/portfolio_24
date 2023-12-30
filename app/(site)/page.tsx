@@ -1,21 +1,15 @@
-import Navbar from "@/components/Navbar";
-import Image from "next/image";
-import SphereModel from "@/components/SphereModel";
+"use client";
 import { Stack } from "@mui/material";
-import CenterText from "@/components/CenterText";
+import Hero from "@/components/Hero";
 import DynamicText from "@/components/DynamicText";
-import Footer from "@/components/Footer";
+import { MotionDiv } from "@/components/MotionDiv";
+import WhoAmI from "@/components/WhoAmI";
 
 export default function Home() {
   return (
-    <Stack className=" gradient_bg h-[110vh] md:h-[110vh]  relative">
-      <div className="mt-16">
-        <SphereModel />
-      </div>
-      <CenterText />
-      <div className="absolute left-5">
-        {/* <DynamicText text="love" /> */}
-      </div>
+    <Stack>
+      <Hero />
+      <WhoAmI />
     </Stack>
   );
 }

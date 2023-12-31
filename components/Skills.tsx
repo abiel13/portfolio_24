@@ -21,7 +21,7 @@ const Skills = () => {
         >
           <div className="flex flex-wrap items-center basis-[40%] gap-[1rem] ">
             {Array.from({ length: 12 }).map((item, i) => (
-              <Skill />
+              <Skill key={i} />
             ))}
           </div>
           <div className="flex-1 flex flex-col gap-5 items-end">

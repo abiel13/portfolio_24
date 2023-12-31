@@ -28,3 +28,31 @@ export const whatido = [
     img: "/thropy.png",
   },
 ];
+
+export const experienceData = [
+  {
+    date: "2023",
+    Title: "SOFTWARE ENGINEER",
+    name: "Opera Ocean",
+  },
+  {
+    date: "2023",
+    Title: "Frontend Engineer",
+    name: "Alteflix",
+  },
+  {
+    date: "2023",
+    Title: "Front End Devleoper",
+    name: "Hello wold",
+  },
+  {
+    date: "2022",
+    Title: "Front End Devleoper",
+    name: "Benezir",
+  },
+  {
+    date: "2022",
+    Title: "Front End Devleoper",
+    name: "freelance",
+  },
+];

@@ -23,7 +23,7 @@ const DynamicText: FC<DynamicTextI> = ({ textArray, hasButton, size }) => {
     } else {
       interval = setInterval(() => {
         settextCount((prev) => (prev + 1) % textArray.length);
-      }, 3000);
+      }, 1000);
     }
 
     return () => clearInterval(interval);

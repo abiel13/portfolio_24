@@ -29,6 +29,18 @@ body {
 
 .dark_blue {
   background: linear-gradient(0deg, #000000, #000000),
-  linear-gradient(0deg, rgba(17, 44, 97, 0.25), rgba(17, 44, 97, 0.25));
-  color:'white !important';
+    linear-gradient(0deg, rgba(17, 44, 97, 0.25), rgba(17, 44, 97, 0.25));
+  color: "white !important";
+}
+
+.rounded_gradient {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: #98d084;
+  filter: blur(50px);
+  position: absolute;
+  bottom: 0px;
+  right: -10%;
+  z-index: -10;
 }

@@ -14,7 +14,6 @@ const Navbar = () => {
         animate={{ scale: 1 }}
         transition={{ ease: "easeIn", duration: ".3" }}
       >
-        {" "}
         <div className="hidden md:flex items-center bg-[#ffffff7a]  shadow-2xl drop-shadow-lg px-6 rounded-lg py-2 gap-4 text-xl text-[#fff] font-medium capitalize">
           {Navroutes?.map((item, i) => (
             <Link key={i} href={`/${item == "Home" ? "" : item}`}>

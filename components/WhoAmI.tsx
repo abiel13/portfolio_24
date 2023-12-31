@@ -9,18 +9,18 @@ const WhoAmI = () => {
   return (
     <Stack
       direction={{ md: "row" }}
-      className="min-h-[110vh] bg-[#ddd] relative px-7 py-5  gap-[1.4rem]"
+      className="min-h-[110vh] relative px-7 py-5  gap-[1.4rem]"
     >
       <div className="flex items-center basis-[34%]">
         <MotionDiv.div
           whileInView={{
-            y: [50, 0],
+            y: [150, 0],
           }}
           transition={{
-            duration: 0.7,
+            duration: 0.5,
             ease: "easeIn",
-            type: "tween",
-            // stiffness: 0.4,
+            type: "spring",
+            damping: 5.4,
           }}
         >
           <DynamicText
@@ -33,7 +33,7 @@ const WhoAmI = () => {
 
       <Grid
         container
-        className="flex-1 flex items-center  px-5 gap-[1rem] justify-around"
+        className="flex-1 flex items-center px-2 md:px-5 gap-[1rem] justify-around"
       >
         {whatido.map((item, i) => (
           <Grid item xs={11} md={4} key={i}>
@@ -45,6 +45,7 @@ const WhoAmI = () => {
               transition={{
                 ease: "easeIn",
                 duration: 0.7,
+                delay: 0.7,
               }}
             >
               <Stack
@@ -53,8 +54,9 @@ const WhoAmI = () => {
                   padding: "1rem .5rem",
                   borderRadius: "10px",
                   bgcolor: "white",
+
                 }}
-                className="group"
+                className="group shadow-lg"
                 spacing={1}
                 alignItems={"center"}
               >
@@ -82,6 +84,8 @@ const WhoAmI = () => {
           </Grid>
         ))}
       </Grid>
+      <div className="rounded_gradient" />
+
     </Stack>
   );
 };

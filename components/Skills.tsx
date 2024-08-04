@@ -7,17 +7,17 @@ import Experience from "./partials/Experience";
 
 const Skills = () => {
   return (
-    <div className="min-h-screen relative px-3 pt-5 mt-[10%]">
+    <div id='skills' className="min-h-screen relative px-3 pt-5 mt-[10%]">
       <Stack alignItems={"center"} spacing={3}>
         <Typography
           className="text-[#0A1E46]"
           sx={{ fontWeight: "bolder", fontSize: "3rem" }}
-        >
+        > 
           Skills & Experience
         </Typography>
         <Stack
           direction={{ md: "row", xs: "column" }}
-          sx={{ marginTop: "1rem", width: "60%", gap: "1.5rem" }}
+          sx={{ marginTop: "1rem", width: "80%", gap: "1.5rem" }}
         >
           <div className="flex flex-wrap items-center basis-[40%] gap-[1rem] ">
             {Array.from({ length: 12 }).map((item, i) => (

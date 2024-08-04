@@ -27,6 +27,13 @@ export const whatido = [
             apps.`,
     img: "/thropy.png",
   },
+  {
+    Title: "React Native Developer",
+    Desc: `Skilled React Developer with Knowledge of Core
+            react concepts necessary for building scalable
+            apps.`,
+    img: "/thropy.png",
+  },
 ];
 
 export const experienceData = [

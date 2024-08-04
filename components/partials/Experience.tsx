@@ -6,7 +6,7 @@ const Experience = ({ item }: { item: any }) => {
   return (
     <MotionDiv.div
       whileInView={{
-        x: [100, 0],
+        x: [100, 10],
       }}
       className="w-full"
     >

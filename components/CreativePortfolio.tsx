@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const CreativePortfolio = () => {
   return (
-    <div className="w-full min-h-screen px-[1rem] md:px-[2rem] my-[10%] flex   pt-[1rem]  relative gap-8">
+    <div className="w-full min-h-screen px-[1rem] md:px-[2rem] my-[10%] flex   pt-[1rem]  relative gap-8 flex-col md:flex-row">
       <div className="basis-1/3 flex flex-col  justify-between gap-8 ">
         <DynamicText
           size="2rem"
@@ -31,7 +31,7 @@ const CreativePortfolio = () => {
           </div>
         </div>
       </div>
-      <div className="flex-1 flex gap-8">
+      <div className="flex-1 grid-cols-1 md:grid-cols-3 grid">
         <WorkCard projectTitle="Youtube Cone" projectDesc="smeheheeheheh" />
         <WorkCard
           size="small"

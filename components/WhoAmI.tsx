@@ -5,6 +5,7 @@ import DynamicText from "./DynamicText";
 import { whatido } from "@/utils/Whoami";
 import Image from "next/image";
 import ThrophyCard from "./partials/ThrophyCard";
+import { professionalNames } from "@/constants/whoiam";
 
 const WhoAmI = () => {
   return (
@@ -34,8 +35,8 @@ const WhoAmI = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 flex-1 gap-x-4 gap-y-5">
-        {whatido.map((item, i) => (
-          <ThrophyCard item={item} key={i} />
+        {professionalNames.map((item, i) => (
+          <ThrophyCard idx={i} item={item} key={i} />
         ))}
       </div>
 

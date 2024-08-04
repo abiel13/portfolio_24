@@ -15,7 +15,7 @@ const TestimonialCard = () => {
 
 const Testimonial = () => {
   return (
-    <div className="min-h-screen relative flex items-center px-[2rem] ">
+    <div className="min-h-screen relative flex flex-col md:flex-row items-center px-[2rem] ">
       <div className="">
         <DynamicText
           hasButton

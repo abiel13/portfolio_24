@@ -8,6 +8,7 @@ import Skills from "@/components/Skills";
 import CreativePortfolio from "@/components/CreativePortfolio";
 import Testimonial from "@/components/Testimonial";
 import Contact from "@/components/Contac";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
@@ -18,6 +19,8 @@ export default function Home() {
       <CreativePortfolio />
       <Testimonial />
       <Contact />
+      <Navbar />
+
     </Stack>
   );
 }

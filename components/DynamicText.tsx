@@ -36,11 +36,15 @@ const DynamicText: FC<DynamicTextI> = ({ textArray, hasButton, size }) => {
       sx={{
         marginTop: "2rem",
         gap: "1rem",
-        display: { md: "block", xs: "none" },
       }}
       spacing={2}
     >
-      <Stack spacing={2}>
+      <Stack
+        sx={{
+          display: { md: "block", xs: "none" },
+        }}
+        spacing={2}
+      >
         <Image
           className="h-[80px] w-[10px]"
           src={"/Line.png"}
@@ -69,6 +73,16 @@ const DynamicText: FC<DynamicTextI> = ({ textArray, hasButton, size }) => {
           height={120}
         />
       </Stack>
+
+      <Typography
+        sx={{
+          fontSize: (size && size) || "2.2rem",
+          display: { md: "none", xs: "block" },
+        }}
+        className="font-bold text-[#0A1E46]  "
+      >
+        {textArray[textCount]}
+      </Typography>
     </Stack>
   );
 };

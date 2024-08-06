@@ -6,11 +6,11 @@ const Experience = ({ item }: { item: any }) => {
   return (
     <MotionDiv.div
       whileInView={{
-        x: [100, 10],
+        x: [100, 0],
       }}
-      className="w-full"
+      className="max-w-full md:w-full"
     >
-      <div className="w-full justify-around rounded-lg gap-6 bg-white shadow-lg flex items-center px-6 py-4">
+      <div className="max-w-full justify-around rounded-lg gap-6 bg-white shadow-lg flex items-center px-6 py-4">
         <Typography className="text-2xl text-[#449F24] font-bold basis-1/3">
           {item.date}
         </Typography>

@@ -15,13 +15,13 @@ const Skill = () => {
       }}
       transition={{
         ease: "easeIn",
-        damping: 5.9,
+        damping: 4.9,
         type: "spring",
       }}
     >
       <div className="flex items-center flex-col gap-4">
-        <div className="w-[100px] flex items-center justify-center  h-[100px] rounded-full shadow-lg ">
-          <Image src={"/git.png"} width={70} height={70} alt="git" />
+        <div className="w-[80px] h-[80px] md:w-[100px] flex items-center justify-center  md:h-[100px] rounded-full shadow-lg ">
+          <Image src={"/git.png"} width={60} height={60} alt="git" />
         </div>
         <Typography className="font-bold capitalize">git</Typography>
       </div>

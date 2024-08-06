@@ -17,7 +17,7 @@ const CreativePortfolio = () => {
         />
 
         <div
-          className="w-full h-[150px] rounded-md  shadow-lg bg-white flex "
+          className="w-full min-h-[150px] rounded-md  shadow-lg bg-white flex "
         >
           <div className="px-3 py-3 flex-1 flex-col gap-2 flex">
             <Typography className="font-bold text-[#0A1E46] text-xl">
@@ -26,7 +26,7 @@ const CreativePortfolio = () => {
             <p>Find Insightful Topics and explanations bla bla blah</p>
             <Link className="bg-[#0A1E46] text-white font-sans px-3 py-2 rounded-lg w-fit" href={''}>Let's Go</Link>
           </div>
-          <div className="relative h-full w-[50%] flex-1 flex-shrink-0">
+          <div className="relative min-h-full w-[50%] flex-1 flex-shrink-0">
             <Image className="object-cover rounded-r-md" src="/work_img.png" alt="" fill />{" "}
           </div>
         </div>

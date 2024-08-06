@@ -79,7 +79,7 @@ const DynamicText: FC<DynamicTextI> = ({ textArray, hasButton, size }) => {
           fontSize: (size && size) || "2.2rem",
           display: { md: "none", xs: "block" },
         }}
-        className="font-bold text-[#0A1E46]  "
+        className="font-bold text-[#0A1E46] "
       >
         {textArray[textCount]}
       </Typography>

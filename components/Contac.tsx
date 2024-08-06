@@ -4,7 +4,7 @@ import ContactCard from "./ContactCard";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen relative px-4 md:px-[2rem] mt-[10%] flex items-center flex-col md:flex-row gap-6">
+    <div className="min-h-screen relative px-4 md:px-[2rem] mt-[10%] flex items-center flex-col md:flex-row gap-6 mb-[10vh]">
       <div className="px-4">
         <DynamicText size="2.4rem" textArray={["Let's Talk More"]} />
       </div>

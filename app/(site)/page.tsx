@@ -12,15 +12,16 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <Stack>
+    <div className="!overflow-x-hidden">
       <Hero />
       <WhoAmI />
       <Skills />
       <CreativePortfolio />
       <Testimonial />
       <Contact />
-      <Navbar />
+      {/* 
+      <Navbar /> */}
 
-    </Stack>
+    </div>
   );
 }

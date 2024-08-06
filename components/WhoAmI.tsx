@@ -12,7 +12,7 @@ const WhoAmI = () => {
     <Stack
       id="about"
       direction={{ md: "row" }}
-      className="min-h-[110vh] relative px-7 py-5  gap-[1.4rem] mt-[10vh]"
+      className="min-h-[110vh] relative px-3 md:px-7 py-5  gap-[1.4rem] mt-[10vh]"
     >
       <div className="flex items-center basis-1/3">
         <MotionDiv.div
@@ -34,7 +34,7 @@ const WhoAmI = () => {
         </MotionDiv.div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 flex-1 gap-x-4 gap-y-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 flex-1 gap-x-4 gap-y-5 justify-items-center">
         {professionalNames.map((item, i) => (
           <ThrophyCard idx={i} item={item} key={i} />
         ))}

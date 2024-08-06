@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const ThrophyCard = ({ item, idx }: { item: any; idx: number }) => {
   return (
-    <Grid item xs={11} md={3}>
+    <div className="w-[80vw] md:w-[300px]">
       <MotionDiv.div
         whileInView={{
-          scale: [1, 1.3, 1.2, 1, 1],
+          scale: [1, 1.1, 1.05, 1, 1],
         }}
         transition={{
           ease: "easeIn",
@@ -51,7 +51,7 @@ const ThrophyCard = ({ item, idx }: { item: any; idx: number }) => {
           <Typography textAlign={"center"}>{item.brief}</Typography>
         </Stack>
       </MotionDiv.div>
-    </Grid>
+    </div>
   );
 };
 

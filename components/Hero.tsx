@@ -6,7 +6,7 @@ import DynamicText from "./DynamicText";
 import { Animate, MotionDiv } from "./MotionDiv";
 
 const Hero = () => {
-  return (  
+  return (
     <Animate>
       <MotionDiv.div
         whileInView={{
@@ -23,7 +23,7 @@ const Hero = () => {
             <SphereModel />
           </div>
           <CenterText />
-          <div className="absolute left-5 mt-[1.5rem]">
+          <div className="absolute -top-3 left-5 mt-[1.5rem] ">
             <DynamicText
               textArray={[
                 '"Code Crafted Intellegence',

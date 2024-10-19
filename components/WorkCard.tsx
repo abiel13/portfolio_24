@@ -18,11 +18,11 @@ const WorkCard: FC<tWorkCard> = ({
       className="rounded-lg h-fit"
       sx={{
         bgcolor: "white",
-        width: "250px",
+        width: "300px",
         boxShadow: "0px 0px 10px rgba(0,0,0,0.4)",
       }}
     >
-      <div className={`relative w-[250px] ${size === 'base' ? 'h-[280px]': 'h-[240px]'}`}>
+      <div className={`relative w-[300px] ${size === 'base' ? 'h-[330px]': 'h-[300px]'}`}>
         <Image
           src={"/work_img.png"}
           alt="work_img"

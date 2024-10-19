@@ -11,7 +11,7 @@ const CreativePortfolio = () => {
     <div className="w-full min-h-screen px-[1rem] md:px-[2rem] my-[10%] flex   pt-[1rem]  relative gap-8 flex-col md:flex-row">
       <div className="basis-1/3 flex flex-col  justify-between gap-8 ">
         <DynamicText
-          size="2rem"
+          size="3rem"
           hasButton
           textArray={["Check Out My Creative Work"]}
         />

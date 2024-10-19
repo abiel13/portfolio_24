@@ -5,7 +5,7 @@ import React from "react";
 const BottomSphere = ({ islight }: { islight?: boolean }) => {
   return (
     <Box
-      sx={{ width: "400px", height: "300px" }}
+      sx={{ width: "450px", height: "350px" }}
       className="absolute bottom-0 -right-4"
     >
       <Image

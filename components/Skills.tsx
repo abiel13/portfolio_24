@@ -1,11 +1,32 @@
+"use client";
 import { Stack, Typography } from "@mui/material";
-import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Skill from "./partials/Skill";
 import { experienceData } from "@/utils/Whoami";
 import Experience from "./partials/Experience";
+import { fetcchExp, fetchSkills } from "@/libs/actions/actions";
+import { NextFetchEvent } from "next/server";
 
 const Skills = () => {
+  const [skillsarr, setSkillsarr] = useState([]);
+  const [exparr, setExparr] = useState([])
+
+  useEffect(() => {
+    (async function () {
+      try {
+        const skills = await fetchSkills();
+        setSkillsarr(skills)
+        console.log(skills);
+
+        const exps = await fetcchExp()
+        setExparr(exps)
+        console.log(exps)
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, []);
+
   return (
     <div id="skills" className="min-h-screen relative px-3 pt-5 mt-[10%]">
       <Stack alignItems={"center"} spacing={3}>
@@ -23,13 +44,13 @@ const Skills = () => {
             gap: "1.5rem",
           }}
         >
-          <div className="flex flex-wrap items-center w-full  md:basis-[40%] gap-[1rem]  justify-center">
-            {Array.from({ length: 12 }).map((item, i) => (
-              <Skill key={i} />
+          <div className="flex flex-wrap items- w-full  md:basis-[40%] gap-[1rem]  ">
+            {skillsarr?.map((item, i) => (
+              <Skill item={item} key={i} />
             ))}
           </div>
           <div className="flex-1 flex flex-col gap-5 md:items-end  w-full">
-            {experienceData.map((item, i) => (
+            {exparr?.map((item, i) => (
               <Experience item={item} key={i} />
             ))}
           </div>

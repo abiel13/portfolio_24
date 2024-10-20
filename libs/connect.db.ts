@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 // See https://mongoosejs.com/docs/guide.html#strictQuery for more information
 mongoose.set("strictQuery", true);
 
-const { MONGODB_URI = "" } = process.env;
+const { MONGO_URI = "" } = process.env;
 
 let isConnected = false;
 let isConnecting = false;
@@ -19,7 +19,7 @@ export const connectToDB = async (): Promise<void> => {
   isConnecting = true;
 
   try {
-    await mongoose.connect(MONGODB_URI ?? "");
+    await mongoose.connect(MONGO_URI ?? "");
     isConnected = true;
   } catch (err: any) {
     console.log(err);

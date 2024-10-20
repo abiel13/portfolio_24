@@ -10,16 +10,18 @@ const Experience = ({ item }: { item: any }) => {
       }}
       className="max-w-full md:w-full"
     >
-      <div className="max-w-full justify-around rounded-lg gap-6 bg-white shadow-lg flex items-center px-6 py-4">
-        <Typography className="text-2xl text-[#449F24] font-bold basis-1/3">
-          {item.date}
+      <div className="max-w-full justify-around rounded-lg gap-6 bg-white shadow-lg flex items-center px-6 py-4 min-h-[130px]">
+        <Typography className="text-xl text-[#449F24] font-medium basis-1/3">
+          {item.startDate} {"-"} {item.endDate}
         </Typography>
         <div className="flex-1">
-          <Typography className="text-2xl font-bold ">{item.Title}</Typography>
-          <Typography className="text-md">{item.name}</Typography>
-          <button className="bg-[#112C61] font-bold px-4 py-1 font-sans mt-4 rounded-lg text-white">
-            Learn More{" "}
-          </button>
+          <Typography className="text-2xl font-bold ">
+            {item.jobTitle}
+          </Typography>
+          <Typography className="text-md">{item.companyName}</Typography>
+        <p className="mt-3 text-gray-500 font-sans">
+          {item.companyBrief}
+        </p>
         </div>
       </div>
     </MotionDiv.div>

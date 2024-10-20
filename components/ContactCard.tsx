@@ -1,3 +1,4 @@
+import { createExp, createSkill } from "@/libs/actions/actions";
 import React from "react";
 
 const ContactCard = () => {
@@ -33,7 +34,17 @@ const ContactCard = () => {
         </div>
       </div>
 
-      <button className="px-5 py-2 rounded-full bg-[#112C61] text-white font-sans font-medium min-w-[140px]">
+      <button
+        onClick={() => {
+          createExp({
+            jobTitle: "Software Engineer ",
+            companyName: "AlteFlix",
+            startDate: "Aug 2023",
+            endDate: "Oct 2024",
+          });
+        }}
+        className="px-5 py-2 rounded-full bg-[#112C61] text-white font-sans font-medium min-w-[140px]"
+      >
         Send
       </button>
     </div>

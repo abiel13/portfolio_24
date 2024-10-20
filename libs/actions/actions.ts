@@ -1,0 +1,81 @@
+"use server";
+
+import { connectToDB } from "../connect.db";
+import Exps from "../models/Experience";
+import ProjectModel from "../models/Projects";
+import SkillModel from "../models/Skills";
+
+export async function createSkill(param: any) {
+  try {
+    await connectToDB();
+    const skill = await SkillModel.create({
+      name: param.name,
+      thumbnailUrl: param.image,
+    });
+    console.log(skill);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function fetchSkills() {
+  try {
+    await connectToDB();
+    const skills = await SkillModel.find();
+    return JSON.parse(JSON.stringify(skills));
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function createprojects(param: any) {
+  try {
+    await connectToDB();
+    const project = await ProjectModel.create({
+      name: param.name,
+      thumbnailUrl: param.image,
+      tools: param.tools,
+      description: param.description,
+      links: param.links,
+    });
+    console.log(project);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function fetchProjects() {
+  try {
+    await connectToDB();
+    const projects = await ProjectModel.find();
+    return JSON.parse(JSON.stringify(projects));
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function createExp(param: any) {
+  try {
+    await connectToDB();
+    const exp = await Exps.create({
+      jobTitle: param.jobTitle,
+      companyName: param.companyName,
+      companyBrief: param.companyBrief,
+      startDate: param.startDate,
+      endDate: param.endDate,
+    });
+    console.log(exp);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function fetcchExp() {
+  try {
+    await connectToDB();
+    const exps = await Exps.find();
+    return JSON.parse(JSON.stringify(exps));
+  } catch (error) {
+    console.error(error);
+  }
+}

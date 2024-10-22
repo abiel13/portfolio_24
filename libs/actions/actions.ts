@@ -4,6 +4,7 @@ import { connectToDB } from "../connect.db";
 import Exps from "../models/Experience";
 import ProjectModel from "../models/Projects";
 import SkillModel from "../models/Skills";
+import Testimonial from "../models/Testimonials";
 
 export async function createSkill(param: any) {
   try {
@@ -75,6 +76,31 @@ export async function fetcchExp() {
     await connectToDB();
     const exps = await Exps.find();
     return JSON.parse(JSON.stringify(exps));
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+
+
+export async function createTestimony(param: any) {
+  try {
+    await connectToDB();
+    const testimony = await Testimonial.create({
+      testimonier:param.testimonier,
+      testimony:param.testimony
+    });
+    console.log(testimony);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function fetchTestimony() {
+  try {
+    await connectToDB();
+    const testimony = await Testimonial.find();
+    return JSON.parse(JSON.stringify(testimony));
   } catch (error) {
     console.error(error);
   }

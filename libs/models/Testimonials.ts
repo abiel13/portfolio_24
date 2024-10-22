@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const testMonialSchema = new mongoose.Schema({
-     tetimonier:{
+     testimonier:{
         type:String,
         required:true,
     },
@@ -10,3 +10,6 @@ const testMonialSchema = new mongoose.Schema({
     }
 })
 
+const Testimonial = mongoose.models.Testimony || mongoose.model('Testimony',testMonialSchema)
+
+export default Testimonial

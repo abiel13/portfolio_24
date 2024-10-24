@@ -34,7 +34,7 @@ export async function createprojects(param: any) {
     await connectToDB();
     const project = await ProjectModel.create({
       name: param.name,
-      thumbnailUrl: param.image,
+      thumbnailUrl: param.thumbnailUrl,
       tools: param.tools,
       description: param.description,
       links: param.links,
@@ -46,9 +46,19 @@ export async function createprojects(param: any) {
 }
 
 export async function fetchProjects() {
+  connectToDB();
   try {
-    await connectToDB();
     const projects = await ProjectModel.find();
+    return JSON.parse(JSON.stringify(projects));
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function fetchProjectbyId(id: string) {
+  connectToDB();
+  try {
+    const projects = await ProjectModel.find({ _id: id });
     return JSON.parse(JSON.stringify(projects));
   } catch (error) {
     console.error(error);
@@ -81,14 +91,12 @@ export async function fetcchExp() {
   }
 }
 
-
-
 export async function createTestimony(param: any) {
   try {
     await connectToDB();
     const testimony = await Testimonial.create({
-      testimonier:param.testimonier,
-      testimony:param.testimony
+      testimonier: param.testimonier,
+      testimony: param.testimony,
     });
     console.log(testimony);
   } catch (error) {

@@ -1,4 +1,4 @@
-import { createExp, createSkill } from "@/libs/actions/actions";
+import { createExp, createSkill, createprojects } from "@/libs/actions/actions";
 import React from "react";
 
 const ContactCard = () => {
@@ -36,11 +36,24 @@ const ContactCard = () => {
 
       <button
         onClick={() => {
-          createExp({
-            jobTitle: "Software Engineer ",
-            companyName: "AlteFlix",
-            startDate: "Aug 2023",
-            endDate: "Oct 2024",
+          createprojects({
+            name: "Desi",
+            thumbnailUrl:
+              "https://i.pinimg.com/736x/c6/82/1d/c6821dee4210319ffd581874e78c4c8a.jpg",
+            tools: [
+              "React Native",
+              "Expo",
+              "Appwrite",
+              "NativeWind",
+              "Typescript",
+              
+            ],
+            links: [
+              "https://github.com/abiel13/desi",
+           
+            ],
+            description:
+              "Desi is a video-sharing app built using React Native, powered by the flexibility of Expo and backed by the secure and scalable backend from Appwrite. The app features a modern and responsive UI designed with NativeWind, styled with Tailwind-like classes for native components. Built with Typescript for strong typing and enhanced code maintainability, Desi offers a seamless video-sharing experience across platforms, focusing on performance and accessibility.",
           });
         }}
         className="px-5 py-2 rounded-full bg-[#112C61] text-white font-sans font-medium min-w-[140px]"

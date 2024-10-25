@@ -34,8 +34,13 @@ const config: Config = {
       },
     },
   },
+   variants: {
+    aspectRatio: ['responsive'], // defaults to ['responsive']
+  },
   plugins: [
-    require("tailwindcss-animate"), // ...
+    require("tailwindcss-animate"), 
+    require('@tailwindcss/aspect-ratio'),
+    // ..
   ],
 };
 export default config;

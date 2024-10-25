@@ -1,8 +1,28 @@
-import React from "react";
+"use client";
+import { createExp, createSkill, createprojects } from "@/libs/actions/actions";
+import React, { useState } from "react";
 
 const ContactCard = () => {
+  const [loading, setLoading] = useState(false);
+
+  async function handleClick() {
+    try {
+      setLoading(true);
+      await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('kkk');
+          resolve({});
+        }, 2000); // The resolve should be called inside setTimeout
+      });
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  }
+  
   return (
-    <div className="w-full md:w-[70%] min-h-[550px] rounded-lg shadow-lg flex items-center flex-col gap-8 bg-[#061024ef] px-2 md:px-3 py-2 justify-center">
+    <div className="w-full md:w-[70%] min-h-[550px] rounded-lg shadow-lg flex items-center flex-col gap-8 bg-[#061024ef] px-2 md:px-6 py-2 justify-center">
       <h1 className="text-center font-bold text-3xl text-white  font-sans">
         {" "}
         Contact Me{" "}
@@ -33,8 +53,11 @@ const ContactCard = () => {
         </div>
       </div>
 
-      <button className="px-5 py-2 rounded-full bg-[#112C61] text-white font-sans font-medium min-w-[140px]">
-        Send
+      <button
+        onClick={handleClick}
+        className="px-5 py-2 rounded-full bg-[#112C61] text-white font-sans font-medium min-w-[140px]"
+      >
+        {loading ? 'sending....' : 'send message'}
       </button>
     </div>
   );

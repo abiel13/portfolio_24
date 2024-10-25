@@ -6,7 +6,6 @@ import { MotionDiv } from "@/components/MotionDiv";
 import WhoAmI from "@/components/WhoAmI";
 import Skills from "@/components/Skills";
 import CreativePortfolio from "@/components/CreativePortfolio";
-import Testimonial from "@/components/Testimonial";
 import Contact from "@/components/Contac";
 import Navbar from "@/components/Navbar";
 
@@ -17,7 +16,6 @@ export default function Home() {
       <WhoAmI />
       <Skills />
       <CreativePortfolio />
-      <Testimonial />
       <Contact />
       {/* 
       <Navbar /> */}

@@ -20,7 +20,7 @@ const WorkCard: FC<tWorkCard> = ({
   size = "base",
   description,
 }) => {
-  console.log(name, thumbnailUrl);
+ 
   return (
     <Stack
       className="rounded-lg h-fit "

@@ -16,11 +16,9 @@ const Skills = () => {
       try {
         const skills = await fetchSkills();
         setSkillsarr(skills)
-        console.log(skills);
 
         const exps = await fetcchExp()
         setExparr(exps)
-        console.log(exps)
       } catch (error) {
         console.log(error);
       }
@@ -44,7 +42,7 @@ const Skills = () => {
             gap: "1.5rem",
           }}
         >
-          <div className="flex flex-wrap items- w-full  md:basis-[40%] gap-[1rem]  ">
+          <div className="flex flex-wrap justify-center w-full  md:basis-[40%] gap-[1rem]  ">
             {skillsarr?.map((item, i) => (
               <Skill item={item} key={i} />
             ))}

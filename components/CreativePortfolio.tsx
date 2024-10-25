@@ -17,7 +17,6 @@ const CreativePortfolio = () => {
       try {
         const projects = await fetchProjects();
         setWorkdata(projects);
-        console.log(projects);
       } catch (error) {
         console.log(error);
       }
@@ -57,7 +56,7 @@ const CreativePortfolio = () => {
           </div>
         </div>
       </div>
-      <div className="flex-1 grid-cols-1 md:grid-cols-3 grid">
+      <div className="flex-1 grid-cols-1 md:grid-cols-3 grid space-y-6 justify-items-center">
         {workdata?.map((item, i) => (
           <WorkCard size={i % 2 == 0 ? "base" : "small"} {...item} key={i} />
         ))}

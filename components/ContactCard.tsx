@@ -32,7 +32,7 @@ const ContactCard = () => {
               className="w-full px-4 py-2 rounded-lg bg-[#ffffff20]"
               type="text"
               value ={subject}
-              onChange =(e:any)  => {setSubject(e.target.value)}
+              onChange ={(e:any)  => {setSubject(e.target.value)}}
             />
           </div>
           <div>

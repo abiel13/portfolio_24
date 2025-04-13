@@ -29,7 +29,7 @@ const ContactCard = () => {
           <div>
             <h1 className="text-white font-medium font-sans">Full Name</h1>{" "}
             <input
-              className="w-full px-4 py-2 rounded-lg bg-[#ffffff20]"
+              className="w-full text-white px-4 py-2 rounded-lg bg-[#ffffff20]"
               type="text"
               value ={subject}
               onChange ={(e:any)  => {setSubject(e.target.value)}}
@@ -38,7 +38,7 @@ const ContactCard = () => {
           <div>
             <h1 className="font-sans font-medium text-white">Email Address</h1>{" "}
             <input
-              className="w-full px-4 py-2 rounded-lg bg-[#ffffff20]"
+              className="w-full text-white px-4 py-2 rounded-lg bg-[#ffffff20]"
               type="text"
               value={senderEmail}
               onChange={(e:any) => setSenderEmail(e.target.value)}
@@ -49,7 +49,7 @@ const ContactCard = () => {
         <div>
           <textarea
             rows={10}
-            className="w-full px-4 py-2 rounded-lg bg-[#ffffff20]"
+            className="w-full text-white px-4 py-2 rounded-lg bg-[#ffffff20]"
             value={text}
             onChange={(e:any) => setText(e.target.value)}
           />

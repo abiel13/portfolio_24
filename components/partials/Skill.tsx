@@ -7,7 +7,7 @@ const Skill = ({item}:{item:any}) => {
   return (
     <MotionDiv.div
       whileInView={{
-        y: [120, 0],
+        y: [110, 0],
         scale: [0, 1],
       }}
       whileHover={{
@@ -15,8 +15,6 @@ const Skill = ({item}:{item:any}) => {
       }}
       transition={{
         ease: "easeIn",
-        damping: 4.9,
-        type: "spring",
       }}
     >
       <div className="flex items-center flex-col gap-4">

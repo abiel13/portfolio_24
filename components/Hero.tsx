@@ -26,6 +26,7 @@ const Hero = () => {
           <div className="absolute -top-3 left-5 mt-[1.5rem] ">
             <DynamicText
               textArray={[
+                "Hello, I'm Abiel ✋",
                 '"Code Crafted Intellegence',
                 "Sophisticated Designs ",
                 "Excellent Problem Solving",

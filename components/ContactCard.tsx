@@ -4,23 +4,19 @@ import React, { useState } from "react";
 
 const ContactCard = () => {
   const [loading, setLoading] = useState(false);
+  const [text, setText]  = useState('');
+  const [subject, setSubject]  = useState('')
+  const [senderEmail, setSenderEmail] = useState('');
 
-  async function handleClick() {
-    try {
-      setLoading(true);
-      await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          console.log('kkk');
-          resolve({});
-        }, 2000); // The resolve should be called inside setTimeout
-      });
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
-  }
+    const handleSubmit = (e:any) => {
+      e.preventDefault();
+      const encodedSubject = encodeURIComponent(subject);
+      const encodedBody = encodeURIComponent(`From: ${senderEmail}\n\n${text}`);
   
+      const mailtoLink = `mailto:dbestabi28@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+      window.location.href = mailtoLink;
+    };
+
   return (
     <div className="w-full md:w-[70%] min-h-[550px] rounded-lg shadow-lg flex items-center flex-col gap-8 bg-[#061024ef] px-2 md:px-6 py-2 justify-center">
       <h1 className="text-center font-bold text-3xl text-white  font-sans">
@@ -35,6 +31,8 @@ const ContactCard = () => {
             <input
               className="w-full px-4 py-2 rounded-lg bg-[#ffffff20]"
               type="text"
+              value ={subject}
+              onChange =(e:any)  => {setSubject(e.target.value)}
             />
           </div>
           <div>
@@ -42,6 +40,9 @@ const ContactCard = () => {
             <input
               className="w-full px-4 py-2 rounded-lg bg-[#ffffff20]"
               type="text"
+              value={senderEmail}
+              onChange={(e:any) => setSenderEmail(e.target.value)}
+      
             />
           </div>
         </div>
@@ -49,12 +50,14 @@ const ContactCard = () => {
           <textarea
             rows={10}
             className="w-full px-4 py-2 rounded-lg bg-[#ffffff20]"
+            value={text}
+            onChange={(e:any) => setText(e.target.value)}
           />
         </div>
       </div>
 
       <button
-        onClick={handleClick}
+        onClick={handleSubmit}
         className="px-5 py-2 rounded-full bg-[#112C61] text-white font-sans font-medium min-w-[140px]"
       >
         {loading ? 'sending....' : 'send message'}
